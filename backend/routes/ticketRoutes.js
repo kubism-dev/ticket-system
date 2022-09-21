@@ -5,7 +5,7 @@ const { getTickets, createTicket } = require('../controllers/ticketController')
 
 router
   .route('/')
-  .get(getTickets, protectRoute)
-  .post(createTicket, protectRoute);
+  .get(protectRoute, getTickets)
+  .post(protectRoute, createTicket);
 
 module.exports = router;

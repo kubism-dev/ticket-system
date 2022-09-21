@@ -3,7 +3,7 @@ const ticketSchema = mongoose.Schema;
 
 const ticketModel = new ticketSchema(
   {
-    name: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'User',
