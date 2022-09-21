@@ -15,7 +15,7 @@ const getTickets = asyncHandler(async (req, res) => {
 
     const tickets = await ticketModel.find({
         user: req.user.id
-    });
+    }).sort({_id:-1});
     res.status(200).json(tickets);
 });
 

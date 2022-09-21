@@ -180,13 +180,9 @@ h3 {
   width: 150px;
   margin-bottom: 20px;
 }
-.btn {
-  transition: transform .25s ease-in-out, opacity .25s ease-in-out;
-}
+
 .btn:hover {
   transform: scale(0.98);
-  opacity: .8;
-  transition: transform .25s ease-in-out, opacity .25s ease-in-out;
 }
 
 .ticket-created {
