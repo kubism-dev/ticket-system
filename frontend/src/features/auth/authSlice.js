@@ -31,14 +31,14 @@ export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async (user, thunkAPI) => {
     try {
-        return await authService.loginUserService(user);
-      } catch (err) {
-        const message =
-          (err.response && err.response.data && err.response.data.message) ||
-          err.message ||
-          err.toString();
-        return thunkAPI.rejectWithValue(message);
-      }
+      return await authService.loginUserService(user);
+    } catch (err) {
+      const message =
+        (err.response && err.response.data && err.response.data.message) ||
+        err.message ||
+        err.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
   }
 );
 

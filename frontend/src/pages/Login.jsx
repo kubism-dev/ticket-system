@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaSign, FaSignInAlt } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, reset } from '../features/auth/authSlice';
 
@@ -24,9 +24,9 @@ function Login() {
       toast.error(message);
     }
     if (isSuccess || user) {
-        navigate('/')
+      navigate('/');
     }
-      dispatch(reset())
+    dispatch(reset());
   }, [isError, isSuccess, user, message]);
 
   const onChange = (e) => {
@@ -40,7 +40,7 @@ function Login() {
     e.preventDefault();
     dispatch(loginUser(formData));
   };
-  
+
   return (
     <>
       <section className="heading">
